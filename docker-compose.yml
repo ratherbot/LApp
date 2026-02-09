@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    container_name: lapp_postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=your_password
+      - POSTGRES_DB=lapp_db
+    ports:
+      - "5432:5432"
